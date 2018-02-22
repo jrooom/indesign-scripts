@@ -1,14 +1,5 @@
 #targetengine "session"
 
-// Declare  variables
-var doc;
-
-app.addEventListener('afterOpen', function(theEvent) {
-  // Only run once a document is opened. See https://forums.adobe.com/message/5410190
-  if (app.layoutWindows.length == 0) return; // Just return when no windows shown avoiding first run...
-  doc = app.activeDocument; // get the current doc
-});
-
 // Event Listener on first save / save as
 app.addEventListener('afterSaveAs', function(theEvent) {
   autoSaveIdml(doc);
